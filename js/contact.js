@@ -18,7 +18,7 @@ export async function onRequestPost({ request, env }) {
   if (!name || message.length < 2 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return reply({ ok: false, error: "invalid" }, 400);
   }
-  if (!env.RESEND_API_KEY) return reply({ ok: false, error: "not configured" }, 500);
+  if (!env.RESEND_API_KEY) return reply({ ok: false, error: "RESEND_API_KEY secret is missing" }, 500);
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "Content-Type": "application/json" },
@@ -30,5 +30,12 @@ export async function onRequestPost({ request, env }) {
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "-"}\nTopic: ${topic || "-"}\n\n${message}`,
     }),
   });
-  return res.ok ? reply({ ok: true }) : reply({ ok: false }, 502);
+  if (res.ok) return reply({ ok: true });
+  const e = await res.json().catch(() => ({}));
+  return reply({ ok: false, error: "Resend said: " + (e.message || "status " + res.status) }, 502);
+}
+
+// Visit https://thefarmersoak.co.uk/api/contact in a browser to check the function is live.
+export async function onRequestGet({ env }) {
+  return reply({ ok: true, function: "running", RESEND_API_KEY_set: !!env.RESEND_API_KEY });
 }
