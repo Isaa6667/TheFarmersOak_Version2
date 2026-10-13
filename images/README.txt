@@ -1,0 +1,1 @@
+Hero photos: hero-1.jpg, hero-2.jpg, hero-3.jpg (about 2000x1100px, under 400KB each, landscape, pub exterior/food/events). Logo: put logo.png here (square or near-square, transparent background, 512px, a light/cream version works best on the dark header).
