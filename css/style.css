@@ -15,7 +15,7 @@ a{color:var(--green)}a:hover{color:var(--oak)}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .skip{position:absolute;left:-999px;top:0;background:var(--green);color:#fff;padding:.7rem 1rem;z-index:300}
 .skip:focus{left:0}
-.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
 h1,h2,h3{font-family:var(--serif);color:var(--green);line-height:1.2;margin:0 0 .6rem}
 h1{font-size:clamp(2.1rem,5vw,3.5rem)}h2{font-size:clamp(1.65rem,3.4vw,2.35rem)}h3{font-size:1.25rem}
 p{margin:0 0 1rem}
@@ -41,7 +41,7 @@ p{margin:0 0 1rem}
 .fo-util-links a{color:var(--cream);text-decoration:none;font-weight:700;padding:.15rem .75rem;border:1px solid rgba(226,194,125,.5);border-radius:99px}
 .fo-util-links a:hover{background:var(--gold-l);color:var(--green-d);border-color:var(--gold-l)}
 .fo-top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:3px solid var(--gold);box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.fo-bar{width:min(1120px,100% - 2.5rem);margin-inline:auto;display:flex;align-items:center;gap:1.5rem;min-height:78px}
+.fo-bar{width:min(1200px,100% - 2.5rem);margin-inline:auto;display:flex;align-items:center;gap:1.5rem;min-height:78px}
 .fo-brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--green);font-family:var(--sc);font-weight:700;font-size:1.7rem;letter-spacing:.04em;line-height:1}
 .fo-logo{width:48px;height:48px;object-fit:contain}
 .fo-top nav{margin-left:auto;display:flex;gap:1.7rem;align-items:center}
@@ -190,3 +190,11 @@ footer{border-top:0;border-radius:36px 36px 0 0}
   .fo-top nav a{padding:.8rem 1rem;border-radius:12px}
   .fo-top nav .fo-mbook{border-radius:999px}
 }
+
+/* Header fit fixes */
+.fo-brand{white-space:nowrap;flex-shrink:0;font-size:1.55rem}
+.fo-bar{gap:1rem}
+.fo-head nav{gap:.1rem}
+.fo-head nav a{padding:.5rem .85rem;font-size:.85rem;white-space:nowrap}
+.fo-cta{flex-shrink:0}
+@media (max-width:1020px){.fo-head nav a{padding:.5rem .6rem;font-size:.8rem}.fo-brand{font-size:1.35rem}}
