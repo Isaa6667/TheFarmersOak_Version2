@@ -1,4 +1,4 @@
-/* Extra styles for join, rules, faq, team and gallery pages */
+/* Extra styles for join, rules, faq, team pages */
 .steps{counter-reset:s;display:grid;gap:1rem;list-style:none;padding:0;margin:0}
 .steps li{counter-increment:s;background:#faf5ec;border-left:5px solid var(--green);padding:1.1rem 1.4rem 1.1rem 4rem;position:relative}
 .steps li::before{content:counter(s);position:absolute;left:1.2rem;top:1rem;width:2rem;height:2rem;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:grid;place-items:center}
@@ -8,13 +8,11 @@
 .faq summary{cursor:pointer;font-weight:700;color:var(--oak)}
 .faq details p{margin:.6rem 0 0}
 .rules{padding-left:1.2rem}.rules li{margin-bottom:.8rem}
-.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
-.member{background:#faf5ec;border-left:5px solid var(--green);padding:1.2rem}
-.member h3{margin:0 0 .2rem}.member p{margin:0}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
-.gallery figure{margin:0;background:#faf5ec}
-.gallery img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#d9d2c2}
-.gallery figcaption{padding:.6rem .9rem;font-size:.95rem}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem}
+.member{background:#faf5ec;border-bottom:5px solid var(--green);overflow:hidden}
+.member img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#d9d2c2}
+.mbody{padding:1rem 1.2rem 1.2rem;text-align:center}
+.mbody h3{margin:0 0 .2rem}.mbody p{margin:0}
 .socialbtns{display:flex;flex-wrap:wrap;gap:.75rem}
 .nextevent{background:var(--green);color:#fff;text-align:center;padding:.7rem 1rem}
 .nextevent a{color:#fff;font-weight:700;text-decoration:underline}
