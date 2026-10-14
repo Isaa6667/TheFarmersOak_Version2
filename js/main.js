@@ -6,7 +6,7 @@
   if (yr) yr.textContent = new Date().getFullYear();
 
   // Mobile menu
-  var burger = d.querySelector('.burger'), nav = d.getElementById('nav');
+  var burger = d.querySelector('.fo-burger'), nav = d.getElementById('nav');
   if (burger && nav) {
     var setNav = function (open) {
       nav.classList.toggle('open', open);
