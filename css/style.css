@@ -1,4 +1,4 @@
-/* The Farmers Oak — main stylesheet (replaces style.css and community.css) */
+/* The Farmers Oak - complete site stylesheet (css/style.css) */
 :root{
   --green:#23422f;--green-d:#162b1e;--cream:#f5e8d6;--paper:#fbf6ea;--card:#fffdf7;--sage:#d3dfcd;
   --oak:#6b4423;--gold:#b98a3e;--gold-l:#e2c27d;--ink:#2a2a25;
@@ -34,23 +34,23 @@ p{margin:0 0 1rem}
 .btnrow,.socialbtns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
 
 /* Utility bar + header */
-.util{background:var(--green-d);color:#e9dcc0;font-size:.85rem}
-.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:38px}
-.util-links{display:flex;align-items:center;gap:.5rem}
-.util .lbl{opacity:.75;margin-right:.2rem}
-.util-links a{color:var(--cream);text-decoration:none;font-weight:700;padding:.15rem .75rem;border:1px solid rgba(226,194,125,.5);border-radius:99px}
-.util-links a:hover{background:var(--gold-l);color:var(--green-d);border-color:var(--gold-l)}
-.top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:3px solid var(--gold);box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.bar{width:min(1120px,100% - 2.5rem);margin-inline:auto;display:flex;align-items:center;gap:1.5rem;min-height:78px}
-.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--green);font-family:var(--sc);font-weight:700;font-size:1.7rem;letter-spacing:.04em;line-height:1}
-.logo{width:48px;height:48px;object-fit:contain}
-.top nav{margin-left:auto;display:flex;gap:1.7rem;align-items:center}
-.top nav a{color:var(--green);text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.09em;text-transform:uppercase;padding:.4rem 0;border-bottom:3px solid transparent}
-.top nav a:hover,.top nav a[aria-current]{border-bottom-color:var(--gold)}
-.top nav .mbook{display:none}
-.callbook{font-weight:700;letter-spacing:.04em;text-decoration:none;padding:.6rem 1.2rem;background:var(--green);color:#fff;border-radius:4px;white-space:nowrap}
-.callbook:hover{background:var(--oak);color:#fff}
-.burger{display:none;margin-left:auto;background:transparent;border:2px solid var(--green);color:var(--green);font:inherit;font-weight:700;padding:.45rem 1rem;border-radius:4px;cursor:pointer}
+.fo-util{background:var(--green-d);color:#e9dcc0;font-size:.85rem}
+.fo-util .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:38px}
+.fo-util-links{display:flex;align-items:center;gap:.5rem}
+.fo-util .lbl{opacity:.75;margin-right:.2rem}
+.fo-util-links a{color:var(--cream);text-decoration:none;font-weight:700;padding:.15rem .75rem;border:1px solid rgba(226,194,125,.5);border-radius:99px}
+.fo-util-links a:hover{background:var(--gold-l);color:var(--green-d);border-color:var(--gold-l)}
+.fo-top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:3px solid var(--gold);box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.fo-bar{width:min(1120px,100% - 2.5rem);margin-inline:auto;display:flex;align-items:center;gap:1.5rem;min-height:78px}
+.fo-brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--green);font-family:var(--sc);font-weight:700;font-size:1.7rem;letter-spacing:.04em;line-height:1}
+.fo-logo{width:48px;height:48px;object-fit:contain}
+.fo-top nav{margin-left:auto;display:flex;gap:1.7rem;align-items:center}
+.fo-top nav a{color:var(--green);text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.09em;text-transform:uppercase;padding:.4rem 0;border-bottom:3px solid transparent}
+.fo-top nav a:hover,.fo-top nav a[aria-current]{border-bottom-color:var(--gold)}
+.fo-top nav .fo-mbook{display:none}
+.fo-callbook{font-weight:700;letter-spacing:.04em;text-decoration:none;padding:.6rem 1.2rem;background:var(--green);color:#fff;border-radius:4px;white-space:nowrap}
+.fo-callbook:hover{background:var(--oak);color:#fff}
+.fo-burger{display:none;margin-left:auto;background:transparent;border:2px solid var(--green);color:var(--green);font:inherit;font-weight:700;padding:.45rem 1rem;border-radius:4px;cursor:pointer}
 
 /* Hero */
 .hero{position:relative;min-height:clamp(460px,72vh,660px);overflow:hidden;background:var(--green-d)}
@@ -152,15 +152,15 @@ footer a{color:var(--cream)}footer a:hover{color:var(--gold-l)}
   .fgrid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr;gap:2rem}
 }
 @media (max-width:860px){
-  .callbook{display:none}.burger{display:block}
-  .top nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:3px solid var(--gold);padding:.5rem 1.25rem 1.2rem}
-  .top nav.open{display:flex}
-  .top nav a{padding:.9rem 0;border-bottom:1px solid rgba(107,68,35,.15)}
-  .top nav .mbook{display:block;margin-top:1rem;text-align:center;background:var(--green);color:#fff;border-radius:4px;border:0}
+  .fo-callbook{display:none}.fo-burger{display:block}
+  .fo-top nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:3px solid var(--gold);padding:.5rem 1.25rem 1.2rem}
+  .fo-top nav.open{display:flex}
+  .fo-top nav a{padding:.9rem 0;border-bottom:1px solid rgba(107,68,35,.15)}
+  .fo-top nav .fo-mbook{display:block;margin-top:1rem;text-align:center;background:var(--green);color:#fff;border-radius:4px;border:0}
 }
 @media (max-width:640px){
-  .util .wrap>span{display:none}.util-links{width:100%;justify-content:center}
-  .brand{font-size:1.4rem}.sec{padding-block:3rem}
+  .fo-util .wrap>span{display:none}.fo-util-links{width:100%;justify-content:center}
+  .fo-brand{font-size:1.4rem}.sec{padding-block:3rem}
   .sign{padding:1.8rem 1.4rem}.arr{display:none}
   .board{padding:1.6rem 1.2rem .6rem;border-width:8px}
   .event-card{grid-template-columns:1fr}.event-card-top{padding:1rem 1.2rem .2rem}.event-card-body{padding:.3rem 1.2rem 1.2rem}
@@ -169,13 +169,13 @@ footer a{color:var(--cream)}footer a:hover{color:var(--gold-l)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
 /* ===== Rounded theme overrides ===== */
-.top{position:sticky;top:0;z-index:100;background:transparent;border:0;box-shadow:none;padding:.7rem 0;pointer-events:none}
-.bar{pointer-events:auto;position:relative;background:var(--paper);border:2px solid rgba(185,138,62,.55);border-radius:24px;box-shadow:0 8px 24px rgba(0,0,0,.14);padding:0 1.2rem;min-height:72px}
-.top nav{gap:.3rem}
-.top nav a{padding:.5rem 1rem;border:0;border-radius:999px}
-.top nav a:hover{background:var(--sage);color:var(--green)}
-.top nav a[aria-current]{background:var(--green);color:#fff}
-.btn,.callbook,.burger{border-radius:999px}
+.fo-top{position:sticky;top:0;z-index:100;background:transparent;border:0;box-shadow:none;padding:.7rem 0;pointer-events:none}
+.fo-bar{pointer-events:auto;position:relative;background:var(--paper);border:2px solid rgba(185,138,62,.55);border-radius:24px;box-shadow:0 8px 24px rgba(0,0,0,.14);padding:0 1.2rem;min-height:72px}
+.fo-top nav{gap:.3rem}
+.fo-top nav a{padding:.5rem 1rem;border:0;border-radius:999px}
+.fo-top nav a:hover{background:var(--sage);color:var(--green)}
+.fo-top nav a[aria-current]{background:var(--green);color:#fff}
+.btn,.fo-callbook,.fo-burger{border-radius:999px}
 .cards article,.member,.formcard{border-radius:20px}
 .event-card,.steps li,.faq details,.note{border-radius:16px}
 .visit{border-radius:22px}
@@ -186,7 +186,7 @@ input,select,textarea{border-radius:12px}
 footer{border-top:0;border-radius:36px 36px 0 0}
 .nextevent{border-radius:0}
 @media (max-width:860px){
-  .top nav{top:calc(100% + .5rem);left:0;right:0;border:2px solid rgba(185,138,62,.55);border-radius:20px;box-shadow:0 12px 28px rgba(0,0,0,.18);padding:.6rem}
-  .top nav a{padding:.8rem 1rem;border-radius:12px}
-  .top nav .mbook{border-radius:999px}
+  .fo-top nav{top:calc(100% + .5rem);left:0;right:0;border:2px solid rgba(185,138,62,.55);border-radius:20px;box-shadow:0 12px 28px rgba(0,0,0,.18);padding:.6rem}
+  .fo-top nav a{padding:.8rem 1rem;border-radius:12px}
+  .fo-top nav .fo-mbook{border-radius:999px}
 }
