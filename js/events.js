@@ -5,6 +5,8 @@ const API_KEY = "AIzaSyDe0mWnERL2TyCPAl7Xs2gbo-rezTsfRQg";
 const REFRESH_MS = 5 * 60 * 1000;
 
 const eventList = document.getElementById("event-list");
+// Optional: data-limit="3" on #event-list shows only the next 3 events (used on the home page).
+const EVENT_LIMIT = eventList ? parseInt(eventList.getAttribute("data-limit"), 10) || 0 : 0;
 
 const dateFormatter = new Intl.DateTimeFormat("en-GB", {
     timeZone: "Europe/London",
@@ -120,6 +122,7 @@ async function loadEvents() {
         });
 
         hasLoaded = true;
+        if (EVENT_LIMIT) events.splice(EVENT_LIMIT);
 
         // Skip redrawing if nothing has changed since the last check.
         const signature = JSON.stringify(events.map(function (e) {
