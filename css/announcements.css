@@ -1,0 +1,15 @@
+/* Uses the site's existing variables where present; falls back to the pub green. */
+#announcements .ann-list{display:grid;gap:1.25rem;margin-top:1.25rem}
+#announcements .ann{
+  background:var(--card,#fff);
+  border:1px solid var(--line,rgba(35,66,47,.18));
+  border-left:4px solid var(--green,#23422f);
+  border-radius:8px;
+  padding:1.25rem 1.5rem;
+  box-shadow:0 2px 6px rgba(0,0,0,.05);
+}
+#announcements .ann h3{margin:0 0 .25rem}
+#announcements .ann-meta{margin:0 0 .9rem;font-size:.9rem;opacity:.75}
+#announcements .ann p:last-child{margin-bottom:0}
+#announcements .ann-status{margin:1rem 0 0}
+#announcements .ann-more{margin-top:1.25rem}
