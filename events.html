@@ -22,6 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600;700&family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/announcements.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -40,10 +41,10 @@
   <section class="sec" id="calendar">
     <div class="wrap">
       <h2>Coming up</h2>
-      <p class="events-intro">Take a look at our upcoming events, special occasions and what’s happening at the pub.</p>
+      <p class="events-intro">Take a look at our upcoming events, special occasions and what’s happening at the pub, soonest first.</p>
 
-      <div id="event-list" class="event-grid" aria-live="polite" aria-busy="true">
-        <p class="events-status">Loading upcoming events...</p>
+      <div id="event-list" data-source="data/events.json" aria-live="polite" aria-busy="true">
+        <p class="ann-status">Loading upcoming events…</p>
       </div>
     </div>
   </section>
