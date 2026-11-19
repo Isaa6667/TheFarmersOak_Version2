@@ -18,6 +18,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/logo.png">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/announcements.css">
 
 <script type="application/ld+json">
 {
@@ -126,6 +127,21 @@
     </div>
   </section>
 
+  <section class="wrap sec" id="announcements"
+           aria-labelledby="ann-title"
+           data-api="https://YOUR-WORKER.YOUR-SUBDOMAIN.workers.dev/"
+           data-fallback="data/announcements.json">
+    <h2 id="ann-title">Latest Announcements</h2>
+    <p>The latest news from The Farmers Oak Roblox group, newest first.</p>
+
+    <p class="ann-status" role="status">Loading announcements…</p>
+    <div class="ann-list"></div>
+
+    <p class="ann-more">
+      <a class="btn" href="https://www.roblox.com/communities/972666931" target="_blank" rel="noopener">Visit Our Roblox Group</a>
+    </p>
+  </section>
+
   <section class="wrap sec">
     <h2>Get in Touch</h2>
 
@@ -145,5 +161,6 @@
 
 <script src="js/components.js"></script>
 <script src="js/main.js"></script>
+<script src="js/announcements.js"></script>
 </body>
 </html>
